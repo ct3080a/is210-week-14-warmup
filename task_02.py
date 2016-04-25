@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """This module uses comprehension tools """
 
-
 from data import FRUIT
 
 def get_cost_per_item(shoplist):
@@ -13,8 +12,7 @@ def get_cost_per_item(shoplist):
         Returns:
             A dictionary (mixed)
         Examples:
- ## enter D and call function with D
-        
+ ## enter D and call function with D       
     """
     newdict = {key: shoplist[key] * FRUIT[key] for key, value in shoplist.iteritems() if key in FRUIT}
     return newdict
@@ -27,7 +25,7 @@ D = {
     'White Peach': 12,
     'Organic Peach': 4,
     'Anjou Pears': 17,
-    'Organic Anjou Pears':12,
+    'Organic Anjou Pears': 12,
     'Bartlett Pears': 5,
     'Organic Bartlett Pears': 16,
     'Bosc Pear': 4,
@@ -35,12 +33,17 @@ D = {
     'Comice Pear': 9,
     'Forelle Pear': 3,
     'Red Pear': 11,
-    "aaaa":55,
+    "aaaa": 55,
     }
 
-
-
-        
-
-
-
+def get_total_cost(shoplist):
+    """This function returns total cost.
+        Argument:
+            shoplist mixed: Dictionary
+        Returns:
+            A float:
+        Examples
+        >>> get_total_cost(D)
+        503.7699999999999
+    """
+    return sum(get_cost_per_item(shoplist).values())
