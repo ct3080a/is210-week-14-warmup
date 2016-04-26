@@ -33,7 +33,8 @@ def get_cost_per_item(shoplist):
         'Bartlett Pears': 9.95
         }
     """
-    newdict = {key: shoplist[key] * FRUIT[key] for key, value in shoplist.iteritems() if key in FRUIT}
+    newdict ={
+    key: shoplist[key] * FRUIT[key] for key, value in shoplist.iteritems() if key in FRUIT}
     return newdict
 D = {
     'Black Plum': 10,
@@ -54,6 +55,7 @@ D = {
     'Red Pear': 11,
     "aaaa": 55,
     }
+
 
 def get_total_cost(shoplist):
     """This function returns total cost.
