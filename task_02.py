@@ -4,6 +4,7 @@
 
 from data import FRUIT
 
+
 def get_cost_per_item(shoplist):
     """This function has a dictionary argument.
         Argument:
@@ -12,7 +13,25 @@ def get_cost_per_item(shoplist):
         Returns:
             A dictionary (mixed)
         Examples:
- ## enter D and call function with D       
+        >>> get_cost_per_item(D)
+        {
+        'Red Plum': 14.950000000000001,
+        'Organic Black Plum': 104.7,
+        'Grenade Pluot': 5.97,
+        'Peach': 59.85,
+        'Forelle Pear': 8.97,
+        'Organic Peach': 19.96,
+        'Organic Bosc Pear': 13.93,
+        'Organic Bartlett Pears': 54.24,
+        'White Peach': 47.88,
+        'Bosc Pear': 7.96,
+        'Anjou Pears': 33.83,
+        'Red Pear': 27.39,
+        'Organic Anjou Pears': 41.88,
+        'Comice Pear': 22.410000000000004,
+        'Black Plum': 29.900000000000002,
+        'Bartlett Pears': 9.95
+        }
     """
     newdict = {key: shoplist[key] * FRUIT[key] for key, value in shoplist.iteritems() if key in FRUIT}
     return newdict
