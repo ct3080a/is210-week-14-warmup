@@ -4,6 +4,7 @@
 
 from data import FRUIT
 
+
 def get_cost_per_item(shoplist):
     """Function that returns value of each item
 
@@ -19,7 +20,8 @@ def get_cost_per_item(shoplist):
     """
     return {key: shoplist[key] * FRUIT[key]
             for key in shoplist.iterkeys() if key in FRUIT} #3.5 replaces iterkey
-                                                           # with key
+                                                            #with key
+
 
 def get_total_cost(shoplist):
     """Function that returns total costs of items.
