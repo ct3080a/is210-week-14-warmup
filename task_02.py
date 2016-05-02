@@ -22,7 +22,6 @@ def get_cost_per_item(shoplist):
             for key in shoplist.iterkeys() if key in FRUIT}  # 3.5 iterkey->key
 
 
-
 def get_total_cost(shoplist):
     """Function that returns total costs of items.
 
