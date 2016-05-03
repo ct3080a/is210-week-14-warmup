@@ -4,6 +4,7 @@
 
 from data import FRUIT
 
+
 def get_cost_per_item(shoplist):
     """Function to get the cost per item in list.
 
@@ -19,7 +20,8 @@ def get_cost_per_item(shoplist):
         {'Lime': 7.08, 'Peach': 95.76, 'Red Pear': 9.96}
     """
     return{item:FRUIT[item] * shoplist[item] for item in shoplist.iterkeys()
-           if item in FRUIT}
+        if item in FRUIT}
+
 
 def get_total_cost(shoplist):
     """Function to calculate total cost of list.

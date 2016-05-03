@@ -16,5 +16,5 @@ class Dog(pet.Pet):
             arbitrary kwargs: Arbitrary arguments dictionary from pet.Pet
 
         """
-        self.has_shots= has_shots
+        self.has_shots = has_shots
         pet.Pet.__init__(self, **kwargs)
