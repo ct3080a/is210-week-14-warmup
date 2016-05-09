@@ -24,7 +24,7 @@ def get_cost_per_item(shoplist):
             {'Lime': 7.08, 'Peach': 95.76, 'Red Pear': 9.96}
     """
     return{key: FRUIT[key] * shoplist[key]
-           for key in shoplist.iterkeys() if item in FRUIT}
+           for key in shoplist.iterkeys() if key in FRUIT}
 
 
 def get_total_cost(shoplist):
